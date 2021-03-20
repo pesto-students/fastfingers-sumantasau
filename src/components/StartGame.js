@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import keyboard_image from "/src/keyboard.png";
+import keyboard_image from "/data/keyboard.png";
 import PlayGame from "./PlayGame";
 
 export default class StartGame extends Component {

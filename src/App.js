@@ -1,10 +1,11 @@
 import React from 'react';
+import StartGame from "./components/StartGame";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Fast Fingers </h1>
+      <StartGame />
     </div>
   );
 }
