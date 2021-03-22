@@ -1,0 +1,65 @@
+.header-info {
+  display: flex;
+  height: 20%;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 5px;
+}
+.game-info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.game-player-info {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.player-name-game-level {
+  font-family: Breamcatcher;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ff5155;
+  padding: 7px;
+  text-transform: uppercase;
+}
+.game-info-image {
+  width: 40px;
+  height: 40px;
+  margin: 0 22.3px 6.3px 0;
+  object-fit: contain;
+}
+
+.game-name-text {
+  font-family: Breamcatcher;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: right;
+  color: #ff5155;
+  padding: 7px 25px;
+}
+
+.game-score-text {
+  font-family: Breamcatcher;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: right;
+  color: #ff5155;
+  padding: 7px 25px;
+  text-transform: uppercase;
+}
