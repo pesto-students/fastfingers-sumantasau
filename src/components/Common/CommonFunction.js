@@ -1,4 +1,4 @@
-import DICTIONARY_FILE_PATH from "../../../data/dictionary.json";
+import DICTIONARY_FILE_PATH from "../data/dictionary.json";
 
 export const GameLevel = {
   EASY: "EASY",
