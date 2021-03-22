@@ -86,7 +86,7 @@ export default function Game() {
     ) {
       onInputCorrectWord();
     }
-  }, [userInput]);
+  }); /*, [userInput]*/
 
   const gameOver = () => {
     const currentScore = sessionStorage.getItem(SessionKeys.PRESENTSCORE) ?? 0;

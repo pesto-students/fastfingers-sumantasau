@@ -33,9 +33,9 @@ export default function Home() {
 
   useEffect(() => {
     sessionStorage.clear();
-    if (playerNameRef.current) {
+    /* if (playerNameRef.current) {
       playerNameRef.current.focus();
-    }
+    }  */
   }, []);
 
   return isPlaying ? (
