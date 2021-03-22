@@ -10,8 +10,17 @@ import {
   getHighScore
 } from "../Common/CommonFunction";
 
-export default function EndScreen({ playAgain }) {
+export default function EndGame({ playAgain }) {
   const highestScore = getHighScore();
+
+  const playerName = sessionStorage.getItem(SessionKeys.PLAYERNAME);
+  const currentUserScores = sessionStorage.getItem(
+    getNameOfCurrentUserScores(playerName)
+  );
+  const currentUserScoresArray = currentUserScores
+    ? currentUserScores.trim().split(" ")
+    : 1;
+  const gameName = currentUserScoresArray.length;
 
   const [isNewGame, setIsNewGame] = useState(false);
 
@@ -23,12 +32,6 @@ export default function EndScreen({ playAgain }) {
     setIsNewGame(true);
   };
 
-  const playerName = sessionStorage.getItem(SessionKeys.PLAYERNAME);
-  const currentUserScores = sessionStorage.getItem(
-    getNameOfCurrentUserScores(playerName)
-  );
-  const currentUserScoresArray = currentUserScores.trim().split(" ");
-  const gameName = currentUserScoresArray.length;
   const showHighScore =
     currentScore === highestScore ? (
       <div className="high-score-text">New High Score</div>
@@ -44,7 +47,7 @@ export default function EndScreen({ playAgain }) {
       />
       <section className="score-body-section">
         <div className="score-container">
-          <div className="score-heading">{`SCORE : GAME ${currentUserScoresArray.length}`}</div>
+          <div className="score-heading">{`SCORE : GAME ${gameName}`}</div>
           <div className="score-count">{currentScore}</div>
           {showHighScore}
         </div>
@@ -68,10 +71,10 @@ export default function EndScreen({ playAgain }) {
   );
 }
 
-EndScreen.propTypes = {
+EndGame.propTypes = {
   playAgain: PropTypes.func.isRequired
 };
 
-EndScreen.defaultProps = {
+EndGame.defaultProps = {
   playAgain: () => {}
 };

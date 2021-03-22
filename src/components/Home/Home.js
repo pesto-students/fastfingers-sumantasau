@@ -27,14 +27,14 @@ export default function Home() {
       initSessionStorage(playerName, gameLevel);
       setIsPlaying(true);
     } else {
-      //playerNameRef.current.focus();
+      playerNameRef.current.focus();
     }
   };
 
   useEffect(() => {
     sessionStorage.clear();
     if (playerNameRef.current) {
-      //playerNameRef.current.focus();
+      playerNameRef.current.focus();
     }
   }, []);
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import "./CountDown.css";
-import { SessionKeys, DifficultyFactor, GameLevel } from "../Common/CommonFunction";
+import { SessionKeys, GameLevel } from "../Common/CommonFunction";
 import {
   secondsToMilliseconds,
   calculateCircleDasharray,
