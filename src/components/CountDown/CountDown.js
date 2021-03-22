@@ -24,7 +24,7 @@ export default function CountDown({ duration, difficultyFactor, onTimeOut }) {
 
   let timerInterval = null;
 
-  const startTimer = () => {    
+  const startTimer = () => {
     timerInterval = setInterval(() => {
       if (remainingTime > 0) {
         setRemainingTime((prevRemainingTime) => prevRemainingTime - 2);
@@ -49,6 +49,7 @@ export default function CountDown({ duration, difficultyFactor, onTimeOut }) {
     setCircleDasharray(calculateCircleDasharray(timeinMillisec, remainingTime));
     setNewTimeAndResetTimer(duration);
     startTimer();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [difficultyFactor]);
 
   useEffect(() => {
@@ -62,6 +63,7 @@ export default function CountDown({ duration, difficultyFactor, onTimeOut }) {
       setNewTimeAndResetTimer(0);
       onTimeOut();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [remainingTime]);
 
   useEffect(() => {
@@ -73,6 +75,7 @@ export default function CountDown({ duration, difficultyFactor, onTimeOut }) {
     return () => {
       setNewTimeAndResetTimer(0);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
