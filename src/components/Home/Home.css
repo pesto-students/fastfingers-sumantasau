@@ -9,6 +9,8 @@ html {
 }
 body {
   background-image: linear-gradient(to bottom, #000, #063c47);
+  font-family: tahoma, verdana, helvetica, sans-serif;
+  font-size: 15px;
 }
 .home-container {
   object-fit: contain;
@@ -29,7 +31,6 @@ body {
 
 .home-title {
   margin: 0;
-  font-family: LaserCorpsGradient;
   font-size: 50px;
   font-weight: normal;
   font-stretch: normal;
@@ -44,20 +45,19 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
   /*border: solid 2px #e4e8ee;*/
 }
 .home-line {
-  margin-top: 15px;
+  margin: 15px 7px 0 7px;
   width: 50px;
   height: 2px;
   border-width: 0;
-  color: #ff5155;
   background-color: #ff5155;
 }
 
 .home-description-text {
-  font-family: Gotham;
-  font-size: 25px;
+  font-size: 21px;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
@@ -75,7 +75,6 @@ body {
   border-radius: 5px;
   box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
-  font-family: Breamcatcher;
   font-size: 25px;
   font-weight: normal;
   font-stretch: normal;
@@ -84,6 +83,7 @@ body {
   letter-spacing: normal;
   text-align: left;
   color: #032228;
+  outline: none;
 }
 
 .home-selection {
@@ -93,8 +93,7 @@ body {
   padding: 10px;
   border-radius: 15px;
   box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
-  border: solid 1px var(--white);
-  font-family: Breamcatcher;
+  border: solid 1px #fff;
   font-size: 25px;
   font-weight: normal;
   font-stretch: normal;
@@ -113,6 +112,7 @@ body {
   border-radius: 15px;
   position: relative;
   font-size: 20px;
+  outline: none;
 }
 
 .start-button {
@@ -127,7 +127,6 @@ body {
   margin: 0 0 0 5px;
   padding-top: 10px;
   text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
-  font-family: Gotham;
   font-size: 30px;
   font-weight: 500;
   font-stretch: normal;

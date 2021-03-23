@@ -19,6 +19,7 @@ export default function Home() {
   const [playerName, setplayerName] = useState("");
   const [gameLevel, setgameLevel] = useState(GameLevel.EASY);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [requiredPlayerName, setrequiredPlayerName] = useState(false);
 
   const playerNameRef = React.createRef();
 
@@ -27,15 +28,17 @@ export default function Home() {
       initSessionStorage(playerName, gameLevel);
       setIsPlaying(true);
     } else {
+      setrequiredPlayerName(true);
       playerNameRef.current.focus();
     }
   };
 
   useEffect(() => {
     sessionStorage.clear();
-    /* if (playerNameRef.current) {
+    if (playerNameRef.current) {
       playerNameRef.current.focus();
-    }  */
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return isPlaying ? (
@@ -58,10 +61,12 @@ export default function Home() {
         placeholder="TYPE YOUR NAME"
         onChange={(event) => {
           setplayerName(event.target.value);
+          setrequiredPlayerName(false);
         }}
         ref={playerNameRef}
         required
       />
+      {requiredPlayerName ? <p>Please enter your name</p> : ""}
 
       <select
         className="home-selection"

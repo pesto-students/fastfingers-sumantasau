@@ -28,7 +28,6 @@
   border: none;
   outline: none;
   text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
-  font-family: Gotham;
   font-size: 30px;
   font-weight: 500;
   font-stretch: normal;
@@ -38,6 +37,8 @@
   text-align: left;
   color: #ff5155;
   text-transform: uppercase;
+  padding-top: 3rem;
+  min-height: 4rem;
 }
 .stop-image {
   width: 44px;
@@ -53,12 +54,11 @@
   width: 100%;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 4rem;
+  padding: 2rem 15rem 0 0;
 }
 
 .game-word {
   text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
-  font-family: Gotham;
   font-size: 5rem;
   font-weight: 500;
   font-stretch: normal;
@@ -78,7 +78,6 @@
   border-radius: 5px;
   box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
-  font-family: Breamcatcher;
   font-size: 25px;
   font-weight: normal;
   font-stretch: normal;
@@ -87,4 +86,5 @@
   letter-spacing: normal;
   text-align: left;
   color: #032228;
+  outline: none;
 }

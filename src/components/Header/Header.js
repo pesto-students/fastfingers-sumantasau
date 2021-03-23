@@ -20,7 +20,7 @@ export default function Header({ difficulty, isGameOver }) {
       <div className="game-info">
         <div className="game-player-info">
           <img
-            className="game-info-image"
+            className="game-player-image"
             src={player_image}
             alt="player icon"
           />
@@ -29,7 +29,7 @@ export default function Header({ difficulty, isGameOver }) {
 
         <div className="game-player-info">
           <img
-            className="game-info-image"
+            className="game-keypad-image"
             src={keypad_image}
             alt="keypad icon"
           />

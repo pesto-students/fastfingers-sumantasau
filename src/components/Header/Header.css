@@ -18,8 +18,7 @@
 }
 
 .player-name-game-level {
-  font-family: Breamcatcher;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -27,19 +26,25 @@
   letter-spacing: normal;
   text-align: left;
   color: #ff5155;
-  padding: 7px;
+  padding: 5px;
   text-transform: uppercase;
 }
-.game-info-image {
-  width: 40px;
-  height: 40px;
-  margin: 0 22.3px 6.3px 0;
+.game-player-image {
+  width: 30px;
+  height: 30px;
+  margin: 5px 10px 6px 10px;
+  object-fit: contain;
+}
+
+.game-keypad-image {
+  width: 30px;
+  height: 30px;
+  margin: 11px 10px 6px 10px;
   object-fit: contain;
 }
 
 .game-name-text {
-  font-family: Breamcatcher;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -51,8 +56,7 @@
 }
 
 .game-score-text {
-  font-family: Breamcatcher;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;

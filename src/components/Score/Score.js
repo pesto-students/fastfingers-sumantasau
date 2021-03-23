@@ -18,10 +18,12 @@ export default function Score() {
   const scoreBoardContent = currentUserScores ? (
     <ul className="score-list">
       {currentUserScoresArray.map((score, index) => (
-        <li
-          key={index}
-          className={`${highestScore === Number(score) ? "highest-score" : ""}`}
-        >
+        <li key={index}>
+          {highestScore === Number(score) ? (
+            <p className="highScore">PERSONAL BEST</p>
+          ) : (
+            ""
+          )}
           {`Game ${index + 1} : ${score}`}
         </li>
       ))}
