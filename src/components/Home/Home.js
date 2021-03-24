@@ -66,7 +66,7 @@ export default function Home() {
         ref={playerNameRef}
         required
       />
-      {requiredPlayerName ? <p>Please enter your name</p> : ""}
+      {requiredPlayerName ? <p className="validationMessage">Please enter your name</p> : ""}
 
       <select
         className="home-selection"
