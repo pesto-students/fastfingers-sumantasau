@@ -86,7 +86,8 @@ export default function Game() {
     ) {
       onInputCorrectWord();
     }
-  }); /*, [userInput]*/
+	 // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userInput]); /*, */
 
   const gameOver = () => {
     const currentScore = sessionStorage.getItem(SessionKeys.PRESENTSCORE) ?? 0;
