@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import keypad_image from "../assets/keypad.png";
 import player_image from "../assets/player.png";
 import "./Header.css";
-import { SessionKeys, GameLevel } from "../Common/CommonFunction";
+import { SessionKeys, GameLevel, FinalScore } from "../Common/CommonFunction";
 import PropTypes from "prop-types";
 
 export default function Header({ difficulty, isGameOver }) {
@@ -40,7 +40,7 @@ export default function Header({ difficulty, isGameOver }) {
       <div className="game-info">
         <div className="game-name-text">fast fingers</div>
         {isGameOver ? null : (
-          <div className="game-score-text">SCORE: {currentScore}</div>
+          <div className="game-score-text">SCORE: {FinalScore(currentScore).replace(".", ":")}</div>
         )}
       </div>
     </header>

@@ -102,6 +102,19 @@ const checkWordMatchDifficulty = (randomWord, difficulty) => {
   return doWordMatchDifficulty;
 };
 
+export const FinalScore = (score) => {
+  let minutes = parseInt(score / 60, 10);
+  let seconds = parseInt(score % 60, 10);
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  const scoreFinal = `${minutes}.${seconds}`;
+  return scoreFinal;
+};
+
 export function getRandomWordForCurrentLevel(difficulty) {
   let randomWord = generateRandomWord();
   while (!checkWordMatchDifficulty(randomWord, difficulty)) {

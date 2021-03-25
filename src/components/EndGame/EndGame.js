@@ -7,7 +7,7 @@ import "./EndGame.css";
 import {
   SessionKeys,
   getNameOfCurrentUserScores,
-  getHighScore
+  getHighScore, FinalScore
 } from "../Common/CommonFunction";
 
 export default function EndGame({ playAgain }) {
@@ -48,7 +48,7 @@ export default function EndGame({ playAgain }) {
       <section className="score-body-section">
         <div className="score-container">
           <div className="score-heading">{`SCORE : GAME ${gameName}`}</div>
-          <div className="score-count">{currentScore}</div>
+          <div className="score-count">{FinalScore(currentScore).replace(".", ":")}</div>
           {showHighScore}
         </div>
 

@@ -2,7 +2,7 @@ import React from "react";
 import {
   SessionKeys,
   getNameOfCurrentUserScores,
-  getHighScore
+  getHighScore, FinalScore
 } from "../Common/CommonFunction";
 import "./Score.css";
 
@@ -24,7 +24,7 @@ export default function Score() {
           ) : (
             ""
           )}
-          {`Game ${index + 1} : ${score}`}
+          {`Game ${index + 1} : ${FinalScore(score).replace(".", ":")}`}
         </li>
       ))}
     </ul>
